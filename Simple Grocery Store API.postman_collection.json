@@ -37,12 +37,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/status",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "status"
-              ]
+              "host": ["{{baseUrl}}"],
+              "path": ["status"]
             }
           },
           "response": []
@@ -116,12 +112,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/products",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "products"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["products"],
               "query": [
                 {
                   "key": "category",
@@ -202,9 +194,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "exec": [
-                  ""
-                ],
+                "exec": [""],
                 "type": "text/javascript",
                 "packages": {},
                 "requests": {}
@@ -216,13 +206,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/products/:productId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "products",
-                ":productId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["products", ":productId"],
               "variable": [
                 {
                   "key": "productId",
@@ -274,12 +259,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts"
-              ]
+              "host": ["{{baseUrl}}"],
+              "path": ["carts"]
             }
           },
           "response": []
@@ -339,15 +320,8 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts",
-                ":cartId",
-                "items",
-                ""
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["carts", ":cartId", "items", ""],
               "variable": [
                 {
                   "key": "cartId",
@@ -406,13 +380,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts",
-                ":cartId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["carts", ":cartId"],
               "variable": [
                 {
                   "key": "cartId",
@@ -488,14 +457,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts",
-                ":cartId",
-                "items"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["carts", ":cartId", "items"],
               "variable": [
                 {
                   "key": "cartId",
@@ -561,15 +524,8 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/:itemId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts",
-                ":cartId",
-                "items",
-                ":itemId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["carts", ":cartId", "items", ":itemId"],
               "variable": [
                 {
                   "key": "cartId",
@@ -626,15 +582,8 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/:itemId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts",
-                ":cartId",
-                "items",
-                ":itemId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["carts", ":cartId", "items", ":itemId"],
               "variable": [
                 {
                   "key": "cartId",
@@ -656,15 +605,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/:itemId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts",
-                ":cartId",
-                "items",
-                ":itemId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["carts", ":cartId", "items", ":itemId"],
               "variable": [
                 {
                   "key": "cartId",
@@ -727,12 +669,8 @@
             },
             "url": {
               "raw": "{{baseUrl}}/api-clients",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api-clients"
-              ]
+              "host": ["{{baseUrl}}"],
+              "path": ["api-clients"]
             }
           },
           "response": []
@@ -780,12 +718,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts"
-              ]
+              "host": ["{{baseUrl}}"],
+              "path": ["carts"]
             }
           },
           "response": []
@@ -845,15 +779,8 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "carts",
-                ":cartId",
-                "items",
-                ""
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["carts", ":cartId", "items", ""],
               "variable": [
                 {
                   "key": "cartId",
@@ -918,12 +845,8 @@
             },
             "url": {
               "raw": "{{baseUrl}}/orders",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "orders"
-              ]
+              "host": ["{{baseUrl}}"],
+              "path": ["orders"]
             }
           },
           "response": []
@@ -992,12 +915,8 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/orders",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "orders"
-              ]
+              "host": ["{{baseUrl}}"],
+              "path": ["orders"]
             }
           },
           "response": []
@@ -1063,13 +982,8 @@
             ],
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "orders",
-                ":orderId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["orders", ":orderId"],
               "variable": [
                 {
                   "key": "orderId",
@@ -1128,13 +1042,8 @@
             },
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "orders",
-                ":orderId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["orders", ":orderId"],
               "variable": [
                 {
                   "key": "orderId",
@@ -1185,13 +1094,8 @@
             ],
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "orders",
-                ":orderId"
-              ],
+              "host": ["{{baseUrl}}"],
+              "path": ["orders", ":orderId"],
               "variable": [
                 {
                   "key": "orderId",
@@ -1210,9 +1114,7 @@
             "type": "text/javascript",
             "packages": {},
             "requests": {},
-            "exec": [
-              ""
-            ]
+            "exec": [""]
           }
         },
         {
@@ -1221,9 +1123,7 @@
             "type": "text/javascript",
             "packages": {},
             "requests": {},
-            "exec": [
-              ""
-            ]
+            "exec": [""]
           }
         }
       ]
@@ -1240,9 +1140,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "exec": [
-                      ""
-                    ],
+                    "exec": [""],
                     "type": "text/javascript",
                     "packages": {}
                   }
@@ -1262,12 +1160,8 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "orders"
-                  ]
+                  "host": ["{{baseUrl}}"],
+                  "path": ["orders"]
                 }
               },
               "response": []
@@ -1316,12 +1210,8 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "orders"
-                  ]
+                  "host": ["{{baseUrl}}"],
+                  "path": ["orders"]
                 }
               },
               "response": []
@@ -1333,9 +1223,7 @@
               "script": {
                 "type": "text/javascript",
                 "packages": {},
-                "exec": [
-                  ""
-                ]
+                "exec": [""]
               }
             },
             {
@@ -1403,12 +1291,8 @@
                 ],
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "orders"
-                  ]
+                  "host": ["{{baseUrl}}"],
+                  "path": ["orders"]
                 }
               },
               "response": []
@@ -1419,9 +1303,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "exec": [
-                      ""
-                    ],
+                    "exec": [""],
                     "type": "text/javascript",
                     "packages": {}
                   }
@@ -1447,12 +1329,8 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "orders"
-                  ]
+                  "host": ["{{baseUrl}}"],
+                  "path": ["orders"]
                 }
               },
               "response": []
@@ -1465,9 +1343,7 @@
                 "type": "text/javascript",
                 "packages": {},
                 "requests": {},
-                "exec": [
-                  ""
-                ]
+                "exec": [""]
               }
             },
             {
@@ -1520,12 +1396,8 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/products?category=invalid-category&results=21",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "products"
-                  ],
+                  "host": ["{{baseUrl}}"],
+                  "path": ["products"],
                   "query": [
                     {
                       "key": "category",
@@ -1567,12 +1439,8 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/products?results=21",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "products"
-                  ],
+                  "host": ["{{baseUrl}}"],
+                  "path": ["products"],
                   "query": [
                     {
                       "key": "category",
@@ -1613,12 +1481,8 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/products?results=-1",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "products"
-                  ],
+                  "host": ["{{baseUrl}}"],
+                  "path": ["products"],
                   "query": [
                     {
                       "key": "category",
@@ -1643,9 +1507,7 @@
           "script": {
             "type": "text/javascript",
             "packages": {},
-            "exec": [
-              ""
-            ]
+            "exec": [""]
           }
         },
         {
@@ -1653,9 +1515,7 @@
           "script": {
             "type": "text/javascript",
             "packages": {},
-            "exec": [
-              ""
-            ]
+            "exec": [""]
           }
         }
       ]
@@ -1666,18 +1526,16 @@
       "listen": "prerequest",
       "script": {
         "type": "text/javascript",
-        "exec": [
-          ""
-        ]
+        "requests": {},
+        "exec": [""]
       }
     },
     {
       "listen": "test",
       "script": {
         "type": "text/javascript",
-        "exec": [
-          ""
-        ]
+        "requests": {},
+        "exec": [""]
       }
     }
   ],
@@ -1688,7 +1546,7 @@
     },
     {
       "key": "accessToken",
-      "value": "YOUR ACCESS TOKEN"
+      "value": ""
     },
     {
       "key": "cartId",
