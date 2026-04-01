@@ -38,4 +38,5 @@ Ensure you have Node.js installed on your machine.
 
 3. Execute the tests:
    ```bash
-  newman run "Simple Grocery Store API.postman_collection.json" -r cli,htmlextra
+   newman run "Simple Grocery Store API.postman_collection.json" -r cli,htmlextra
+  
