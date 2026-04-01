@@ -30,7 +30,7 @@ Ensure you have Node.js installed on your machine.
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/adrian-raf/API-Test-using-Postman.git](https://github.com/adrian-raf/API-Test-using-Postman.git)
+   git clone https://github.com/adrian-raf/API-Test-using-Postman.git
 
 2. Install Newman and the HTML Extra Reporter:
    ```bash
