@@ -685,7 +685,6 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "// Register API client - Post-response Script",
                   "pm.test(\"Status code is 201\", function () {",
@@ -707,9 +706,12 @@
                   "    pm.expect(response.accessToken).to.be.a(\"string\").and.not.empty;",
                   "});",
                   "",
-                  "pm.environment.set(\"accessToken\", response.accessToken);",
+                  "pm.collectionVariables.set(\"accessToken\", response.accessToken);",
                   "console.log(\"Stored accessToken\");"
-                ]
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -870,7 +872,6 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "const response = pm.response.json();",
                   "",
@@ -878,8 +879,11 @@
                   "    pm.response.to.have.status(201);",
                   "});",
                   "",
-                  "pm.environment.set(\"orderId\", response.orderId);"
-                ]
+                  "pm.collectionVariables.set(\"orderId\", response.orderId);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -923,7 +927,6 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "// Get all orders - Post-response Script",
                   "pm.test(\"Status code is 200\", function () {",
@@ -939,7 +942,7 @@
                   "});",
                   "",
                   "const response = pm.response.json();",
-                  "const storedOrderId = pm.environment.get(\"orderId\");",
+                  "const storedOrderId = pm.collectionVariables.get(\"orderId\");",
                   "",
                   "pm.test(\"Response is an array\", function () {",
                   "    pm.expect(response).to.be.an(\"array\");",
@@ -960,7 +963,10 @@
                   "        pm.expect(matchedOrder, `Expected orderId ${storedOrderId} to exist in orders list`).to.exist;",
                   "    }",
                   "});"
-                ]
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -995,10 +1001,9 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "const response = pm.response.json();",
-                  "const storedOrderId = pm.environment.get(\"orderId\");",
+                  "const storedOrderId = pm.collectionVariables.get(\"orderId\");",
                   "",
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
@@ -1008,19 +1013,16 @@
                   "    pm.expect(response).to.have.property(\"id\");",
                   "    pm.expect(response.id).to.equal(storedOrderId);",
                   "});"
-                ]
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
           "request": {
             "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{accessToken}}",
-                "type": "text"
-              }
-            ],
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
               "host": [
@@ -1046,27 +1048,31 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
-                  "const response = pm.response.json();",
-                  "const storedOrderId = pm.environment.get(\"orderId\");",
+                  "// Update order - Post-response Script",
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
                   "",
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});"
-                ]
+                  "pm.test(\"Response time is acceptable (< 2000ms)\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(2000);",
+                  "});",
+                  "",
+                  "pm.test(\"Response body is empty\", function () {",
+                  "    pm.expect(pm.response.text()).to.eql(\"\");",
+                  "});",
+                  "",
+                  "console.log(\"Order updated successfully for orderId:\", pm.collectionVariables.get(\"orderId\"));"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
           "request": {
             "method": "PATCH",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{accessToken}}",
-                "type": "text"
-              }
-            ],
+            "header": [],
             "body": {
               "mode": "raw",
               "raw": "{\n \"comment\": \"Pickup at 2PM.\"\n}",
@@ -1101,26 +1107,22 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 204\", function () {",
                   "    pm.response.to.have.status(204);",
                   "});",
                   "",
-                  "pm.environment.unset(\"orderId\");"
-                ]
+                  "pm.collectionVariables.unset(\"orderId\");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
           "request": {
             "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{accessToken}}",
-                "type": "text"
-              }
-            ],
+            "header": [],
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
               "host": [
@@ -1220,7 +1222,7 @@
                       "// Get all orders - Post-response Script",
                       "",
                       "const response = pm.response.json();",
-                      "const storedOrderId = pm.collectionVariables.get(\"orderId\");",
+                      "",
                       "pm.test(\"Response time is acceptable (< 2000ms)\", function () {",
                       "    pm.expect(pm.response.responseTime).to.be.below(2000);",
                       "});",
@@ -1236,12 +1238,7 @@
                       "",
                       "",
                       "",
-                      "pm.test(\"Stored orderId exists in orders list\", function () {",
-                      "    if (storedOrderId) {",
-                      "        const matchedOrder = response.find(order => order.id === storedOrderId);",
-                      "        pm.expect(matchedOrder, `Expected orderId ${storedOrderId} to exist in orders list`).to.exist;",
-                      "    }",
-                      "});"
+                      ""
                     ],
                     "type": "text/javascript",
                     "packages": {},
@@ -1265,12 +1262,16 @@
               "response": []
             }
           ],
+          "auth": {
+            "type": "noauth"
+          },
           "event": [
             {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
                 "packages": {},
+                "requests": {},
                 "exec": [
                   ""
                 ]
@@ -1281,6 +1282,7 @@
               "script": {
                 "type": "text/javascript",
                 "packages": {},
+                "requests": {},
                 "exec": [
                   "pm.test(\"Status code is 401\", function () {\r",
                   "    pm.response.to.have.status(401);\r",
@@ -1316,13 +1318,7 @@
               ],
               "request": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer test123",
-                    "type": "text"
-                  }
-                ],
+                "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/orders",
                   "host": [
@@ -1342,15 +1338,7 @@
                   "listen": "test",
                   "script": {
                     "exec": [
-                      "const response = pm.response.json();",
-                      "",
-                      "pm.test(\"Status code is 401\", function () {",
-                      "    pm.response.to.have.status(401);",
-                      "});",
-                      "",
-                      "pm.test(\"Error message is 'Invalid bearer token.'\", function () {",
-                      "    pm.expect(response.error).to.eql(\"Invalid bearer token.\");",
-                      "});"
+                      ""
                     ],
                     "type": "text/javascript",
                     "packages": {},
@@ -1360,13 +1348,7 @@
               ],
               "request": {
                 "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer 123abc",
-                    "type": "text"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"cartId\": \"{{cartId}}\",\n    \"customerName\": \"{{$randomFullName}}\"\n}",
@@ -1389,6 +1371,16 @@
               "response": []
             }
           ],
+          "auth": {
+            "type": "bearer",
+            "bearer": [
+              {
+                "key": "token",
+                "value": "wrongToken",
+                "type": "string"
+              }
+            ]
+          },
           "event": [
             {
               "listen": "prerequest",
@@ -1592,6 +1584,16 @@
       ]
     }
   ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{accessToken}}",
+        "type": "string"
+      }
+    ]
+  },
   "event": [
     {
       "listen": "prerequest",
@@ -1617,11 +1619,11 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "https://simple-grocery-store-api.glitch.me"
+      "value": "https://simple-grocery-store-api.click"
     },
     {
       "key": "accessToken",
-      "value": "819e731464ada827feeed5bfbf17d84c682cd8d1a9bd18bd0b0a576585e5387b"
+      "value": ""
     },
     {
       "key": "cartId",
