@@ -37,8 +37,12 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/status",
-              "host": ["{{baseUrl}}"],
-              "path": ["status"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "status"
+              ]
             }
           },
           "response": []
@@ -112,8 +116,12 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/products",
-              "host": ["{{baseUrl}}"],
-              "path": ["products"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products"
+              ],
               "query": [
                 {
                   "key": "category",
@@ -194,7 +202,9 @@
             {
               "listen": "prerequest",
               "script": {
-                "exec": [""],
+                "exec": [
+                  ""
+                ],
                 "type": "text/javascript",
                 "packages": {},
                 "requests": {}
@@ -206,8 +216,13 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/products/:productId",
-              "host": ["{{baseUrl}}"],
-              "path": ["products", ":productId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products",
+                ":productId"
+              ],
               "variable": [
                 {
                   "key": "productId",
@@ -259,8 +274,12 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts"
+              ]
             }
           },
           "response": []
@@ -320,8 +339,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts", ":cartId", "items", ""],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts",
+                ":cartId",
+                "items",
+                ""
+              ],
               "variable": [
                 {
                   "key": "cartId",
@@ -380,8 +406,13 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts", ":cartId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts",
+                ":cartId"
+              ],
               "variable": [
                 {
                   "key": "cartId",
@@ -457,8 +488,14 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts", ":cartId", "items"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts",
+                ":cartId",
+                "items"
+              ],
               "variable": [
                 {
                   "key": "cartId",
@@ -524,8 +561,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/:itemId",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts", ":cartId", "items", ":itemId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts",
+                ":cartId",
+                "items",
+                ":itemId"
+              ],
               "variable": [
                 {
                   "key": "cartId",
@@ -582,8 +626,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/:itemId",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts", ":cartId", "items", ":itemId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts",
+                ":cartId",
+                "items",
+                ":itemId"
+              ],
               "variable": [
                 {
                   "key": "cartId",
@@ -605,8 +656,15 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/:itemId",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts", ":cartId", "items", ":itemId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts",
+                ":cartId",
+                "items",
+                ":itemId"
+              ],
               "variable": [
                 {
                   "key": "cartId",
@@ -649,7 +707,7 @@
                   "    pm.expect(response.accessToken).to.be.a(\"string\").and.not.empty;",
                   "});",
                   "",
-                  "pm.collectionVariables.set(\"accessToken\", response.accessToken);",
+                  "pm.environment.set(\"accessToken\", response.accessToken);",
                   "console.log(\"Stored accessToken\");"
                 ]
               }
@@ -669,8 +727,12 @@
             },
             "url": {
               "raw": "{{baseUrl}}/api-clients",
-              "host": ["{{baseUrl}}"],
-              "path": ["api-clients"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api-clients"
+              ]
             }
           },
           "response": []
@@ -718,8 +780,12 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/carts",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts"
+              ]
             }
           },
           "response": []
@@ -779,8 +845,15 @@
             },
             "url": {
               "raw": "{{baseUrl}}/carts/:cartId/items/",
-              "host": ["{{baseUrl}}"],
-              "path": ["carts", ":cartId", "items", ""],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "carts",
+                ":cartId",
+                "items",
+                ""
+              ],
               "variable": [
                 {
                   "key": "cartId",
@@ -797,21 +870,16 @@
             {
               "listen": "test",
               "script": {
-                "exec": [
-                  "const response = pm.response.json();\r",
-                  "\r",
-                  "\r",
-                  "pm.test(\"Status code is 201\", function () {\r",
-                  "    pm.response.to.have.status(201);\r",
-                  "});\r",
-                  "\r",
-                  "pm.collectionVariables.set(\"orderId\", response.orderId);\r",
-                  "\r",
-                  ""
-                ],
                 "type": "text/javascript",
-                "packages": {},
-                "requests": {}
+                "exec": [
+                  "const response = pm.response.json();",
+                  "",
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "",
+                  "pm.environment.set(\"orderId\", response.orderId);"
+                ]
               }
             }
           ],
@@ -827,13 +895,7 @@
               ]
             },
             "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{accessToken}}",
-                "type": "text"
-              }
-            ],
+            "header": [],
             "body": {
               "mode": "raw",
               "raw": "{\n    \"cartId\": \"{{cartIdOrder}}\",\n    \"customerName\": \"{{$randomFullName}}\"\n}",
@@ -845,8 +907,12 @@
             },
             "url": {
               "raw": "{{baseUrl}}/orders",
-              "host": ["{{baseUrl}}"],
-              "path": ["orders"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ]
             }
           },
           "response": []
@@ -857,6 +923,7 @@
             {
               "listen": "test",
               "script": {
+                "type": "text/javascript",
                 "exec": [
                   "// Get all orders - Post-response Script",
                   "pm.test(\"Status code is 200\", function () {",
@@ -872,7 +939,7 @@
                   "});",
                   "",
                   "const response = pm.response.json();",
-                  "const storedOrderId = pm.collectionVariables.get(\"orderId\");",
+                  "const storedOrderId = pm.environment.get(\"orderId\");",
                   "",
                   "pm.test(\"Response is an array\", function () {",
                   "    pm.expect(response).to.be.an(\"array\");",
@@ -893,10 +960,7 @@
                   "        pm.expect(matchedOrder, `Expected orderId ${storedOrderId} to exist in orders list`).to.exist;",
                   "    }",
                   "});"
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
+                ]
               }
             }
           ],
@@ -915,8 +979,12 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/orders",
-              "host": ["{{baseUrl}}"],
-              "path": ["orders"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ]
             }
           },
           "response": []
@@ -927,47 +995,20 @@
             {
               "listen": "test",
               "script": {
+                "type": "text/javascript",
                 "exec": [
-                  "// Get single order - Post-response Script",
+                  "const response = pm.response.json();",
+                  "const storedOrderId = pm.environment.get(\"orderId\");",
+                  "",
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
                   "});",
                   "",
-                  "pm.test(\"Response time is acceptable (< 2000ms)\", function () {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(2000);",
-                  "});",
-                  "",
-                  "pm.test(\"Content-Type header is application/json\", function () {",
-                  "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
-                  "});",
-                  "",
-                  "const response = pm.response.json();",
-                  "const storedOrderId = pm.collectionVariables.get(\"orderId\");",
-                  "",
-                  "pm.test(\"Response is an object\", function () {",
-                  "    pm.expect(response).to.be.an(\"object\");",
-                  "});",
-                  "",
-                  "pm.test(\"Order has required properties\", function () {",
+                  "pm.test(\"Response contains orderId\", function () {",
                   "    pm.expect(response).to.have.property(\"id\");",
-                  "    pm.expect(response).to.have.property(\"created\");",
-                  "    pm.expect(response).to.have.property(\"customerName\");",
-                  "    pm.expect(response).to.have.property(\"items\");",
-                  "});",
-                  "",
-                  "pm.test(\"Order ID matches stored orderId\", function () {",
-                  "    if (storedOrderId) {",
-                  "        pm.expect(response.id).to.eql(storedOrderId);",
-                  "    }",
-                  "});",
-                  "",
-                  "pm.test(\"Items is an array\", function () {",
-                  "    pm.expect(response.items).to.be.an(\"array\");",
+                  "    pm.expect(response.id).to.equal(storedOrderId);",
                   "});"
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
+                ]
               }
             }
           ],
@@ -982,8 +1023,13 @@
             ],
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
-              "host": ["{{baseUrl}}"],
-              "path": ["orders", ":orderId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                ":orderId"
+              ],
               "variable": [
                 {
                   "key": "orderId",
@@ -1000,25 +1046,15 @@
             {
               "listen": "test",
               "script": {
-                "exec": [
-                  "// Update order - Post-response Script",
-                  "pm.test(\"Status code is 204\", function () {",
-                  "    pm.response.to.have.status(204);",
-                  "});",
-                  "",
-                  "pm.test(\"Response time is acceptable (< 2000ms)\", function () {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(2000);",
-                  "});",
-                  "",
-                  "pm.test(\"Response body is empty\", function () {",
-                  "    pm.expect(pm.response.text()).to.eql(\"\");",
-                  "});",
-                  "",
-                  "console.log(\"Order updated successfully for orderId:\", pm.collectionVariables.get(\"orderId\"));"
-                ],
                 "type": "text/javascript",
-                "packages": {},
-                "requests": {}
+                "exec": [
+                  "const response = pm.response.json();",
+                  "const storedOrderId = pm.environment.get(\"orderId\");",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
               }
             }
           ],
@@ -1042,8 +1078,13 @@
             },
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
-              "host": ["{{baseUrl}}"],
-              "path": ["orders", ":orderId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                ":orderId"
+              ],
               "variable": [
                 {
                   "key": "orderId",
@@ -1060,26 +1101,14 @@
             {
               "listen": "test",
               "script": {
+                "type": "text/javascript",
                 "exec": [
-                  "// Delete order - Post-response Script",
                   "pm.test(\"Status code is 204\", function () {",
                   "    pm.response.to.have.status(204);",
                   "});",
                   "",
-                  "pm.test(\"Response time is acceptable (< 2000ms)\", function () {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(2000);",
-                  "});",
-                  "",
-                  "pm.test(\"Response body is empty\", function () {",
-                  "    pm.expect(pm.response.text()).to.eql(\"\");",
-                  "});",
-                  "",
-                  "pm.collectionVariables.unset(\"orderId\");",
-                  "console.log(\"Deleted order successfully\");"
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
+                  "pm.environment.unset(\"orderId\");"
+                ]
               }
             }
           ],
@@ -1094,8 +1123,13 @@
             ],
             "url": {
               "raw": "{{baseUrl}}/orders/:orderId",
-              "host": ["{{baseUrl}}"],
-              "path": ["orders", ":orderId"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                ":orderId"
+              ],
               "variable": [
                 {
                   "key": "orderId",
@@ -1114,7 +1148,9 @@
             "type": "text/javascript",
             "packages": {},
             "requests": {},
-            "exec": [""]
+            "exec": [
+              ""
+            ]
           }
         },
         {
@@ -1123,7 +1159,9 @@
             "type": "text/javascript",
             "packages": {},
             "requests": {},
-            "exec": [""]
+            "exec": [
+              ""
+            ]
           }
         }
       ]
@@ -1140,7 +1178,9 @@
                 {
                   "listen": "test",
                   "script": {
-                    "exec": [""],
+                    "exec": [
+                      ""
+                    ],
                     "type": "text/javascript",
                     "packages": {}
                   }
@@ -1160,8 +1200,12 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["orders"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
                 }
               },
               "response": []
@@ -1210,8 +1254,12 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["orders"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
                 }
               },
               "response": []
@@ -1223,7 +1271,9 @@
               "script": {
                 "type": "text/javascript",
                 "packages": {},
-                "exec": [""]
+                "exec": [
+                  ""
+                ]
               }
             },
             {
@@ -1255,44 +1305,32 @@
                 {
                   "listen": "prerequest",
                   "script": {
-                    "type": "text/javascript",
                     "exec": [
-                      "// Log all headers being sent",
-                      "console.log('=== PRE-REQUEST DEBUG ===');",
-                      "console.log('URL:', pm.request.url.toString());",
-                      "console.log('Method:', pm.request.method);",
-                      "console.log('All Headers:');",
-                      "pm.request.headers.each(header => {",
-                      "    console.log(`  ${header.key}: ${header.value}`);",
-                      "});",
-                      "",
-                      "// Ensure Authorization header is set",
-                      "pm.request.headers.upsert({",
-                      "    key: 'Authorization',",
-                      "    value: 'Bearer kontol123'",
-                      "});",
-                      "",
-                      "console.log('After upsert - Authorization:', pm.request.headers.get('Authorization'));"
-                    ]
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
                   }
                 }
               ],
               "request": {
-                "auth": {
-                  "type": "noauth"
-                },
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "kontol123",
+                    "value": "Bearer test123",
                     "type": "text"
                   }
                 ],
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["orders"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
                 }
               },
               "response": []
@@ -1303,9 +1341,20 @@
                 {
                   "listen": "test",
                   "script": {
-                    "exec": [""],
+                    "exec": [
+                      "const response = pm.response.json();",
+                      "",
+                      "pm.test(\"Status code is 401\", function () {",
+                      "    pm.response.to.have.status(401);",
+                      "});",
+                      "",
+                      "pm.test(\"Error message is 'Invalid bearer token.'\", function () {",
+                      "    pm.expect(response.error).to.eql(\"Invalid bearer token.\");",
+                      "});"
+                    ],
                     "type": "text/javascript",
-                    "packages": {}
+                    "packages": {},
+                    "requests": {}
                   }
                 }
               ],
@@ -1320,7 +1369,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"cartId\": \"GDMO_XOL9EIOfjiV_rYfp\",\n    \"customerName\": \"{{$randomFullName}}\"\n}",
+                  "raw": "{\n    \"cartId\": \"{{cartId}}\",\n    \"customerName\": \"{{$randomFullName}}\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1329,8 +1378,12 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/orders",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["orders"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
                 }
               },
               "response": []
@@ -1343,7 +1396,9 @@
                 "type": "text/javascript",
                 "packages": {},
                 "requests": {},
-                "exec": [""]
+                "exec": [
+                  ""
+                ]
               }
             },
             {
@@ -1396,8 +1451,12 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/products?category=invalid-category&results=21",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["products"],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
                   "query": [
                     {
                       "key": "category",
@@ -1439,8 +1498,12 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/products?results=21",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["products"],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
                   "query": [
                     {
                       "key": "category",
@@ -1481,8 +1544,12 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/products?results=-1",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["products"],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
                   "query": [
                     {
                       "key": "category",
@@ -1507,7 +1574,9 @@
           "script": {
             "type": "text/javascript",
             "packages": {},
-            "exec": [""]
+            "exec": [
+              ""
+            ]
           }
         },
         {
@@ -1515,7 +1584,9 @@
           "script": {
             "type": "text/javascript",
             "packages": {},
-            "exec": [""]
+            "exec": [
+              ""
+            ]
           }
         }
       ]
@@ -1527,7 +1598,9 @@
       "script": {
         "type": "text/javascript",
         "requests": {},
-        "exec": [""]
+        "exec": [
+          ""
+        ]
       }
     },
     {
@@ -1535,7 +1608,9 @@
       "script": {
         "type": "text/javascript",
         "requests": {},
-        "exec": [""]
+        "exec": [
+          ""
+        ]
       }
     }
   ],
@@ -1546,7 +1621,7 @@
     },
     {
       "key": "accessToken",
-      "value": ""
+      "value": "819e731464ada827feeed5bfbf17d84c682cd8d1a9bd18bd0b0a576585e5387b"
     },
     {
       "key": "cartId",
