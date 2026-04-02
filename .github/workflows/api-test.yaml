@@ -32,7 +32,7 @@ jobs:
 
       # Run the API tests using Newman and generate an HTML report
       - name: Run API Tests and Generate Report
-        run: newman run "Simple_Grocery_Store_API.postman_collection.json" -r cli,htmlextra --reporter-htmlextra-export newman-report.html
+        run: newman run "Simple Grocery Store API.postman_collection.json" -r cli,htmlextra --reporter-htmlextra-export newman-report.html
         # Continue even if there are test failures
         continue-on-error: true
 
