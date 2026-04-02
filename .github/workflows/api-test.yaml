@@ -16,13 +16,13 @@ jobs:
     steps:
       # Checkout repo
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Setup Node.js environment
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '24'
 
       # Install Newman and the HTML Extra Reporter globally
       - name: Install Newman and HTML Extra Reporter
